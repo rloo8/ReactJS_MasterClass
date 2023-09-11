@@ -3,20 +3,24 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
 `;
-const Box = styled.div`
-  background-color: ${(props) => props.bgColor};
-  width: 100px;
-  height: 100px;
+const Btn = styled.button`
+  background-color: tomato;
+  color: #fff;
 `;
-const Circle = styled(Box)`
-  border-radius: 50px;
+const Input = styled.input.attrs({ required: true, minLength: 10 })`
+  background-color: tomato;
 `;
 
 function App() {
   return (
     <Container>
-      <Box bgColor="teal" />
-      <Circle bgColor="tomato" />
+      <Btn />
+      <Btn as="a" />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
+      <Input />
     </Container>
   );
 }
