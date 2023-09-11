@@ -3,24 +3,28 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
 `;
-const Btn = styled.button`
-  background-color: tomato;
-  color: #fff;
+
+const Text = styled.span`
+  font-size: 30px;
 `;
-const Input = styled.input.attrs({ required: true, minLength: 10 })`
+
+const Box = styled.div`
+  width: 200px;
+  height: 200px;
   background-color: tomato;
+  ${Text} {
+    &:hover {
+      font-size: 50px;
+    }
+  }
 `;
 
 function App() {
   return (
     <Container>
-      <Btn />
-      <Btn as="a" />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
-      <Input />
+      <Box>
+        <Text>hello</Text>
+      </Box>
     </Container>
   );
 }
